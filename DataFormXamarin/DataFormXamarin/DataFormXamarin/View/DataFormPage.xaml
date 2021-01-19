@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataForm="clr-namespace:Syncfusion.XForms.DataForm;assembly=Syncfusion.SfDataForm.XForms"
+             xmlns:dataformxamarin="clr-namespace:DataFormXamarin"
+             Visual="Material"
+             xmlns:syncTheme="clr-namespace:Syncfusion.XForms.Themes;assembly=Syncfusion.Core.XForms"
+             x:Class="DataFormXamarin.DataFormPage">
+
+    <ContentPage.BindingContext>
+        <dataformxamarin:DataFormViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <dataformxamarin:DataFormBehavior/>
+    </ContentPage.Behaviors>
+
+    <ContentPage.Content>
+            <Grid>
+                <dataForm:SfDataForm Margin="0,20,0,0" x:Name="dataForm" DataObject="{Binding ContactsInfo}"/>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>
